@@ -1,0 +1,12 @@
+server:
+  port: 9400
+eureka:
+  server: 
+    enable-self-preservation: true #是否开启自我保护模式
+  instance: 
+    hostname: 127.0.0.1
+  client:
+    registerWithEureka: false #注册中心是否注册资金
+    fetchRegistry: false #是否检索服务
+    serviceUrl: 
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
